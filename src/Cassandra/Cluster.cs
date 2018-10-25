@@ -63,8 +63,24 @@ namespace Cassandra
 
         internal IInternalCluster InternalRef => this;
 
+        internal Serializer Serializer
+        {
+            get
+            {
+                return _serializer;
+            }
+        }
+
         /// <inheritdoc />
         IControlConnection IInternalCluster.GetControlConnection()
+        {
+            return _controlConnection;
+        }
+
+        /// <summary>
+        /// Gets the control connection used by the cluster
+        /// </summary>
+        internal ControlConnection GetControlConnection()
         {
             return _controlConnection;
         }
