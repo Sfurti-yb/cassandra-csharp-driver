@@ -32,7 +32,7 @@ namespace Cassandra
         /// The default consistency level for queries: <c>ConsistencyLevel.LocalOne</c>.
         /// For DataStax Astra, this constant should be ignored as the default is LocalQuorum.
         /// </summary>    
-        public const ConsistencyLevel DefaultConsistencyLevel = ConsistencyLevel.YbStrong;
+        public const ConsistencyLevel DefaultConsistencyLevel = ConsistencyLevel.YBStrong;
 
         /// <summary>
         /// The default serial consistency level for conditional updates: <c>ConsistencyLevel.Serial</c>.
