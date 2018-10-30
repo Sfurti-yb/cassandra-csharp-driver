@@ -1,31 +1,32 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Description>A modern, feature-rich and highly tunable C# client library for Apache Cassandra and DataStax Enterprise</Description>
-    <Copyright>Copyright © by DataStax</Copyright>
-    <AssemblyTitle>DataStax C# Driver for Apache Cassandra</AssemblyTitle>
+    <Description>A modern, feature-rich and highly tunable C# client library for YugaByte DB and Apache Cassandra</Description>
+    <Copyright>Copyright © 2018 by YugaByte, Copyright © 2018 by DataStax</Copyright>
+    <AssemblyTitle>YugaByte C# Driver for Apache Cassandra</AssemblyTitle>
     <AssemblyVersion>3.99.0.0</AssemblyVersion>
-    <FileVersion>3.23.0.0</FileVersion>
-    <VersionPrefix>3.23.0</VersionPrefix>
+    <FileVersion>3.6.0.0</FileVersion>
+    <VersionPrefix>3.6.0</VersionPrefix>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
-    <Authors>DataStax</Authors>
+    <Authors>YugaByte</Authors>
     <TargetFrameworks Condition="'$(BuildCoreOnly)' != 'True'">net452;netstandard2.0</TargetFrameworks>
     <TargetFramework Condition="'$(BuildCoreOnly)' == 'True'">netstandard2.0</TargetFramework>
     <NoWarn>$(NoWarn);1591</NoWarn>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsNotAsErrors>NU1901;NU1902;NU1903;NU1904</WarningsNotAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <AssemblyName>Cassandra</AssemblyName>
-    <Product>DataStax C# Driver for Apache Cassandra</Product>
-    <AssemblyOriginatorKeyFile>../../build/datastax.snk</AssemblyOriginatorKeyFile>
+    <AssemblyName>YugaByte.Cassandra</AssemblyName>
+    <Product>YugaByte C# Driver for Apache Cassandra</Product>
+    <AssemblyOriginatorKeyFile>../../../yugabyte.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
-    <PackageId>CassandraCSharpDriver</PackageId>
-    <Title>DataStax C# Driver for Apache Cassandra</Title>
-    <PackageTags>cassandra;apache;dse;datastax;driver;client;database;nosql;dotnet;netcore;db</PackageTags>
+    <PackageId>YugaByteCassandraCSharpDriver</PackageId>
+    <Title>YugaByte C# Driver for Apache Cassandra</Title>
+    <PackageTags>cassandra;apache;datastax;driver;client;database;nosql;dotnet;netcore;db;yugabyte</PackageTags>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <RepositoryUrl>https://github.com/datastax/csharp-driver</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/datastax/csharp-driver</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/yugabyte/cassandra-csharp-driver</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/yugabyte/cassandra-csharp-driver</PackageProjectUrl>
     <LangVersion>7.1</LangVersion>
-	<NuGetAudit>false</NuGetAudit>
+    <NuGetAudit>false</NuGetAudit>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="$([System.Text.RegularExpressions.Regex]::IsMatch('$(TargetFramework)', '^net4\d'))">
     <DefineConstants>$(DefineConstants);NETFRAMEWORK</DefineConstants>
