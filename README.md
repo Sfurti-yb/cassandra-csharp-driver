@@ -1,4 +1,4 @@
-# DataStax C# Driver for Apache Cassandra
+# YugaByte C# Driver for Apache Cassandra
 
 A modern, [feature-rich][features] and highly tunable C# client library for Apache Cassandra (2.0+) using Cassandra's binary protocol and Cassandra Query Language v3.
 
