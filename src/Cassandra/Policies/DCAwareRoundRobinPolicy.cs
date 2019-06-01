@@ -315,5 +315,13 @@ namespace Cassandra
                 return false;
             }
         }
+
+        public bool RequiresTokenMap
+        {
+            get
+            {
+                return false;
+            }
+        }
     }
 }

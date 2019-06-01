@@ -185,6 +185,12 @@ namespace Cassandra
 
         internal async Task RebuildTokenMapAsync(bool retry, bool fetchKeyspaces)
         {
+            if (!Configuration.Policies.LoadBalancingPolicy.RequiresTokenMap)
+            {
+                Metadata.Logger.Info("Skip rebuilding token map");
+                return;
+            }
+
             IEnumerable<KeyspaceMetadata> ksList = null;
             if (fetchKeyspaces)
             {

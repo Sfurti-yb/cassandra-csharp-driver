@@ -83,7 +83,15 @@ namespace Cassandra
         {
             get
             {
-                return false;
+                return _loadBalancingPolicy.RequiresPartitionMap;
+            }
+        }
+
+        public bool RequiresTokenMap
+        {
+            get
+            {
+                return _loadBalancingPolicy.RequiresTokenMap;
             }
         }
     }
