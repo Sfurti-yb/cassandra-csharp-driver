@@ -50,7 +50,8 @@ namespace Cassandra.Serialization
             { ColumnTypeCode.TinyInt, TypeSerializer.PrimitiveSbyteSerializer },
             { ColumnTypeCode.Uuid, TypeSerializer.PrimitiveGuidSerializer },
             { ColumnTypeCode.Varchar, TypeSerializer.PrimitiveStringSerializer },
-            { ColumnTypeCode.Varint, TypeSerializer.PrimitiveBigIntegerSerializer }
+            { ColumnTypeCode.Varint, TypeSerializer.PrimitiveBigIntegerSerializer },
+            { ColumnTypeCode.Json, TypeSerializer.PrimitiveJsonSerializer }
         };
         
         private readonly IEnumerable<ITypeSerializer> _defaultCustomTypeSerializers = new ITypeSerializer[]

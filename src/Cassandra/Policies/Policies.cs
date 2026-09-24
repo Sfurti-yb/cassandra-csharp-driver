@@ -15,6 +15,7 @@
 //
 
 using System;
+using Cassandra.YugaByte;
 
 namespace Cassandra
 {
@@ -36,8 +37,8 @@ namespace Cassandra
         /// <see cref="TokenAwarePolicy"/> with <see cref="DCAwareRoundRobinPolicy"/> as child policy.
         /// </para>
         /// </summary>
-        public static ILoadBalancingPolicy DefaultLoadBalancingPolicy => 
-            new DefaultLoadBalancingPolicy(new TokenAwarePolicy(new DCAwareRoundRobinPolicy()));
+        public static ILoadBalancingPolicy DefaultLoadBalancingPolicy =>
+            new PartitionAwarePolicy();
 
         /// <summary>
         /// Creates a new instance of the default load balancing policy with the provided local datacenter.

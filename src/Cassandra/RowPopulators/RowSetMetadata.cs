@@ -67,7 +67,8 @@ namespace Cassandra
         /// <summary>
         /// Tuple of n subtypes
         /// </summary>
-        Tuple = 0x0031
+        Tuple = 0x0031,
+        Json = 0x0080,
     }
 
     /// <summary>

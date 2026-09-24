@@ -373,6 +373,7 @@ namespace Cassandra.Connections.Control
 
                         currentHost = await _topologyRefresher.RefreshNodeListAsync(
                             endPoint, connection, _serializer.GetCurrentSerializer()).ConfigureAwait(false);
+                        await _metadata.RefreshPartitionMap().ConfigureAwait(false);
 
                         if (isInitializing)
                         {
@@ -572,7 +573,8 @@ namespace Cassandra.Connections.Control
                 var currentEndPoint = _currentConnectionEndPoint;
                 var currentHost = await _topologyRefresher.RefreshNodeListAsync(
                     currentEndPoint, _connection, _serializer.GetCurrentSerializer()).ConfigureAwait(false);
-                
+                await _metadata.RefreshPartitionMap().ConfigureAwait(false);
+
                 SetCurrentConnectionEndpoint(currentHost, currentEndPoint);
 
                 await _metadata.RebuildTokenMapAsync(false, _config.MetadataSyncOptions.MetadataSyncEnabled).ConfigureAwait(false);

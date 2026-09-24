@@ -64,5 +64,13 @@ namespace Cassandra
                     Thread.Sleep((int) schedule.NextDelayMs());
             }
         }
+
+        public bool RequiresPartitionMap
+        {
+            get
+            {
+                return false;
+            }
+        }
     }
 }
