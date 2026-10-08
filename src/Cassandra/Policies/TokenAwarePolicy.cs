@@ -146,7 +146,7 @@ namespace Cassandra
         {
             get
             {
-                return _childPolicy.RequiresPartitionMap;
+                return ChildPolicy.RequiresPartitionMap;
             }
         }
 

@@ -51,7 +51,7 @@ namespace Cassandra
         /// </para>
         /// </summary>
         public static ILoadBalancingPolicy DefaultLoadBalancingPolicy =>
-            new PartitionAwarePolicy(new DCAwareRoundRobinPolicy(null, int.MaxValue));
+            new PartitionAwarePolicy(new DCAwareRoundRobinPolicy(null));
 
         /// <summary>
         /// Creates a new instance of the default load balancing policy with the provided local datacenter.

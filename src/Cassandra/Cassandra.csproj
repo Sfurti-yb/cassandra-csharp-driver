@@ -25,7 +25,6 @@
     <PackageProjectUrl>https://github.com/yugabyte/cassandra-csharp-driver</PackageProjectUrl>
     <LangVersion>7.1</LangVersion>
     <NuGetAudit>false</NuGetAudit>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="$([System.Text.RegularExpressions.Regex]::IsMatch('$(TargetFramework)', '^net4\d'))">
     <DefineConstants>$(DefineConstants);NETFRAMEWORK</DefineConstants>

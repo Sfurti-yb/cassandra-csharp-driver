@@ -83,7 +83,7 @@ namespace Cassandra
         {
             get
             {
-                return _loadBalancingPolicy.RequiresPartitionMap;
+                return LoadBalancingPolicy.RequiresPartitionMap;
             }
         }
 
@@ -91,7 +91,7 @@ namespace Cassandra
         {
             get
             {
-                return _loadBalancingPolicy.RequiresTokenMap;
+                return LoadBalancingPolicy.RequiresTokenMap;
             }
         }
     }

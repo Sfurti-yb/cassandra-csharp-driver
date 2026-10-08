@@ -81,7 +81,7 @@ namespace Cassandra
         {
             get
             {
-                return _serializer;
+                return (Serializer)_controlConnection.Serializer.GetCurrentSerializer();
             }
         }
 
@@ -94,7 +94,7 @@ namespace Cassandra
         /// <summary>
         /// Gets the control connection used by the cluster
         /// </summary>
-        internal ControlConnection GetControlConnection()
+        internal IControlConnection GetControlConnection()
         {
             return _controlConnection;
         }
