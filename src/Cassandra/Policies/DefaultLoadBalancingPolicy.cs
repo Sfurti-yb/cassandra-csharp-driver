@@ -106,5 +106,9 @@ namespace Cassandra
                 yield return h;
             }
         }
+
+        public bool RequiresPartitionMap => ChildPolicy.RequiresPartitionMap;
+
+        public bool RequiresTokenMap => ChildPolicy.RequiresTokenMap;
     }
 }

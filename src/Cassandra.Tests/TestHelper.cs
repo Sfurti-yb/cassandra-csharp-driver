@@ -28,7 +28,6 @@
 //   and limitations under the License.
 
 using NUnit.Framework;
->>>>>>> 72624cf2 (Address review comments and fix license)
 using System;
 using System.Collections;
 using System.Collections.Generic;
